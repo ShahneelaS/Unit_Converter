@@ -78,8 +78,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Streamlit Page Title
-st.title("🌐 Google Unit Convertor")
+# Streamlit Page Title 
+st.title("🔄 Unit Convertor")
 
 # Sidebar for navigation
 st.sidebar.title("🔍 Unit Categories")
