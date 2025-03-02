@@ -4,57 +4,76 @@ import requests
 # Custom CSS 
 st.markdown("""
     <style>
-        /* Main background */
+        /* Main background with a light gradient */
         .stApp { 
-            background: linear-gradient(135deg, #6C5CE7, #00CEC9) !important;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2) !important;
         }
-        /* Left sidebar background */
+        /* Left sidebar background with the same light gradient */
         [data-testid="stSidebar"] > div:first-child {
-            background: linear-gradient(135deg, #6C5CE7, #00CEC9) !important;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2) !important;
         }
-        /* Top header/navbar background */
+        /* Top header/navbar background with the same light gradient */
         [data-testid="stHeader"] {
-            background: linear-gradient(135deg, #6C5CE7, #00CEC9) !important;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2) !important;
         }
-        /* Top header text styling */
+        /* Top header text styling: Dark text for light background */
         h1, h2 {
-            color: #ecf0f1;
+            color: #2d3436;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 3px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
         /* Conversion result message styling override */
         div[role="alert"] {
-            background-color: #2C3E50 !important;
-            color: #ecf0f1 !important;
+            background-color: #2d3436 !important;
+            color: #ffffff !important;
             font-weight: bold;
         }
         /* Button styling */
         .stButton>button {
-            background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+            background: linear-gradient(135deg, #74b9ff 0%, #a29bfe 100%);
             color: white;
             border-radius: 20px;
             padding: 12px 25px;
             font-weight: bold;
-            box-shadow: 0px 0px 12px rgba(255, 117, 140, 0.8);
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
             transition: 0.3s ease;
         }
         .stButton>button:hover {
             transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(255, 117, 140, 1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
         }
         /* Select box styling */
         .stSelectbox>div>div {
-            background: #f0f2f6;
-            border: 3px solid #8e44ad;
+            background: #ffffff;
+            border: 3px solid #2d3436;
             border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             transition: 0.3s ease;
         }
         .stSelectbox>div>div:hover {
             transform: scale(1.05);
-            border-color: #ff758c;
+            border-color: #636e72;
+        }
+        /* Sidebar collapse arrow styling for better visibility */
+        [data-testid="stSidebarCollapseButton"] svg {
+            fill: #2d3436 !important;
+        }
+        /* Responsive adjustments for extra small screens */
+        @media only screen and (max-width: 600px) {
+            h1, h2 {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                padding: 5px;
+            }
+            .stButton>button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            [data-testid="stSidebar"] > div:first-child, [data-testid="stHeader"] {
+                padding: 10px;
+            }
         }
     </style>
 """, unsafe_allow_html=True)
